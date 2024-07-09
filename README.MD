@@ -70,6 +70,7 @@ wmic useraccount where "Name='administrator'" set PasswordExpires=false
 REM Delete the script itself
 del "%~f0"
 ```
+[Lear more about Add a Custom Script to Windows Setup](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/add-a-custom-script-to-windows-setup?view=windows-11)
 
 ### Step 9: Unmount and Commit Changes
 ```shell
@@ -91,7 +92,7 @@ dism /Unmount-Wim /MountDir:C:\Win11Mount /Commit
 dism /Export-Image /SourceImageFile:C:\Win11WIM\install.wim /SourceIndex:1 /DestinationImageFile:C:\Win11WIM\install_compressed.wim /Compress:max /CheckIntegrity
 ```
 
-### Convert Back to ESD
+### Optional: Convert Back to ESD
 ```shell
 dism /Export-Image /SourceImageFile:C:\Win11WIM\install_compressed.wim /SourceIndex:1 /DestinationImageFile:C:\Win11ISO\sources\install.esd /Compress:recovery /CheckIntegrity
 ```
