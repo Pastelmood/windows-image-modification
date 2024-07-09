@@ -41,3 +41,5 @@ robocopy D:\ C:\Win11ISO /mir
 ```bat
 dism /Get-WimInfo /WimFile:C:\Win11ISO\sources\install.esd
 ```
+
+![Windows Edition Index](https://github.com/Pastelmood/windows-image-modification/blob/main/img/image_001.jpg "Windows Edition Index")
